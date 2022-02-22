@@ -1,0 +1,36 @@
+public class MyClass {
+     static int FrequencyCount(int[] a,int num,boolean flag){
+        int low=0;
+        int high=a.length-1;
+        int result=-1;
+        
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            if (a[mid] ==num) {
+                result = mid;
+                if (flag == true) {
+                    low = mid + 1;
+                } else
+                    high = mid - 1;
+            }
+
+            else if (a[mid] <num) {
+                low = mid + 1;
+            } else
+                high = mid - 1;
+
+        }
+    
+    return result;
+}
+    public static void main(String args[]) {
+      int[] a= { 1, 1, 2, 2,  4, 5,5, 6, 6,6,6 ,9,10,11 };
+      int num=6;
+        int lower_idx = FrequencyCount(a, num, false);
+        int uppper_idx = FrequencyCount(a, num, true);
+
+        
+        System.out.println(uppper_idx - lower_idx + 1);
+    }
+}

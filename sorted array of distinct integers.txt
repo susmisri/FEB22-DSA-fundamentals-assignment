@@ -1,0 +1,41 @@
+public class MyClass {
+     static int BinarySearch(int [] a,int target){
+        int low=0;
+        int high=a.length-1;
+        int i=0;
+        
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+           if(target<a[mid]){
+               high=mid-1;
+               for(i=low;i<high;i++){
+                   if(target>=low&&target<=high){
+                      return i;
+                   }
+               }
+           }
+          else if(target>a[mid]) {
+              
+             low=mid+1;
+               for(i=low;i<high;i++){
+                   if(target>=low&&target<=high){
+                      return i;
+                   }
+               } 
+          }
+              
+              else{
+                 return mid;
+              }
+       
+        }
+        return i;
+    }
+    public static void main(String args[]) {
+    int[] a={1,2,3,4,5};
+      int target=6;
+     System.out.println(BinarySearch(a,target));
+        
+    }
+}
