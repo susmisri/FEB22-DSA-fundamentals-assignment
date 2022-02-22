@@ -1,0 +1,18 @@
+public class MyClass {
+    static void rotation(int[] a,int n){
+        int size=a.length;
+        for(int i=0;i<size;i++){
+        if(i<n){
+            System.out.print(a[size+i-n]+" ");
+        }
+        else{
+            System.out.print(a[i-n]+" ");
+        }
+    }
+    }
+    
+    public static void main(String args[]) {
+     int[] a={1,2,3,4,5};
+     rotation(a,2);
+    }
+}

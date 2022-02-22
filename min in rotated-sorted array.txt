@@ -1,0 +1,26 @@
+public class MyClass {
+    static int findmin(int[] a){
+        int start=0;
+        int end=a.length-1;
+        while(start<end){
+            if(a[start]<a[end]){
+                return a[start];
+            }
+            int mid=start+(end-start)/2;
+            if(a[mid]>a[end]){
+                start=mid+1;
+            }
+            else{
+                end=mid;
+            }
+        }
+        return a[start];
+    }
+    
+    
+    public static void main(String args[]) {
+      int[] a={3,4,5,1,2};
+      
+      System.out.println(findmin(a));
+    }
+}
