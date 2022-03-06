@@ -1,0 +1,22 @@
+public class intersection_of_two_array {
+    public static void main(String[] args) {
+        int a[] = {1,2,2,1};
+        int b[] = {2,2};
+        int n = a.length;
+        int m = b.length;
+        int i = 0;
+        int j = 0;
+        while (i < n && j < m) {
+            if (a[i] < b[j]) {
+                i++;
+            } else if (b[j] < a[i]) {
+                j++;
+            } else {
+
+                System.out.print(a[i] + " ");
+                i++;
+                j++;
+            }
+        }
+    }
+}
