@@ -1,0 +1,16 @@
+public class MyClass {
+    
+    public static void gcd(int divisor,int divident){
+        if(divident%divisor==0){
+            System.out.println(divisor);
+            return;
+        }
+        gcd(divident%divisor,divisor);
+       
+    }
+    public static void main(String[] args) {
+        int a=8;
+        int b=16;
+        gcd(a,b);
+    }
+}

@@ -1,0 +1,30 @@
+import java.util.*;
+public class MyClass {
+    public static  void stringInDec(int c[],int i, String s){
+        if(i>=s.length()){
+            return;
+        }
+        else{
+            char ch=s.charAt(i);
+            c[ch-'a']++;
+            i++;
+            stringInDec(c,i,s);
+        }
+    }
+    public static void convert_to_string(int c[]){
+        for (int i = 25; i >=0; i--) {
+            for (int j = 0; j < c[i]; j++) {
+                System.out.print((char) (i + 'a'));
+            }
+        }
+
+    }
+    public static void main(String[] args) {
+        String s="compiler";
+        int c[]=new int[26];
+        stringInDec(c,0,s);
+        System.out.println(Arrays.toString(c));
+        convert_to_string(c);
+
+    }
+}
