@@ -1,0 +1,19 @@
+public class MyClass {
+    public static void reverse(int num,String str){
+        if(num%10==0){
+            System.out.println(str);
+            return;
+        }
+        int n=num%10;
+         str+= String.valueOf(n);
+         num=num/10;
+         reverse(num,str);
+
+    }
+    public static void main(String[] args) {
+        int num=123456;
+        String str="";
+        reverse(num,str);
+    }
+}
+    
