@@ -1,0 +1,24 @@
+public class MyClass {
+    public static void minAndMax(int arr[],int n,int min,int max){
+        if(n==arr.length){
+            System.out.println("min number:"+min);
+            System.out.println("max number:"+max);
+            return;
+        }
+        if(arr[n]<min){
+            min=arr[n];
+        }
+        if(arr[n]>max){
+            max=arr[n];
+        }
+        n++;
+        minAndMax(arr,n,min,max);
+
+    }
+    public static void main(String[] args) {
+        int arr[]={3,6,2,-9,5,4};
+        int min=Integer.MAX_VALUE;
+        int max=Integer.MIN_VALUE;
+        minAndMax(arr,0,min, max);
+    }
+}

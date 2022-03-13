@@ -1,0 +1,21 @@
+public class MyClass {
+   static  int f1=0,f2=1;
+    static void fibo(int n){
+ 
+       if(n>0){ 
+       int f3=f1+f2;
+        f1=f2;
+        f2=f3;
+        System.out.print(" "+f3);
+       fibo(n-1);
+       }
+        
+    }
+ 
+    public static void main(String args[]) {
+   int n=10;
+  
+       System.out.print(f1+" "+f2);
+    fibo(n-2);
+   }
+    }

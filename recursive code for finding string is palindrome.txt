@@ -1,0 +1,24 @@
+public class MyClass {
+    static boolean ispalindrome(String s){
+       int l=s.length();
+        if(l==0||l==1){
+            return true;
+        }
+        if(s.charAt(0)==s.charAt(l-1)){
+            return ispalindrome(s.substring(1,l-1));
+        }
+        return false;
+    }
+    
+    
+    public static void main(String args[]) {
+     String s="madam";
+
+      if(ispalindrome(s)){
+          System.out.println("string is palinndrome");
+      }
+      else{
+           System.out.println("string is not palinndrome");
+      }
+    }
+}
